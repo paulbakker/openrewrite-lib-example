@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+
+dependencies {
+    implementation files("../library-examples/grpc-example/build/libs/grpc-example.jar")
+    implementation files("../library-examples/niws-example/build/libs/niws-example.jar")
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
